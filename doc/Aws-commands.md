@@ -65,9 +65,6 @@ ctrl+d
 ➜  ~ watch -n 2 'ecs-cli logs --task-id ID --cluster CLUSTER |grep "018-"'
 ```
 
-e.g. 
-![Screenshot_from_2019-03-05_16-02-10](uploads/ae7078bdc23ccdb5851fea5c912b45ed/Screenshot_from_2019-03-05_16-02-10.png)
-
 ### 查看ECS镜像
 
 ```shell
