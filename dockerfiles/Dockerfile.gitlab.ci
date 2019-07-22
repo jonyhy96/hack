@@ -1,0 +1,15 @@
+FROM gitlab/gitlab-runner:latest
+
+# Let's start with some basic stuff.
+RUN apt-get update -qq && apt-get install -qqy \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    lxc \
+    iptables
+# install pip
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py
+# Install Docker from Docker Inc. repositories.
+RUN curl -sSL https://get.docker.com/ | sh
+# install docker-compose
+RUN pip install -U docker-compose
